@@ -1,0 +1,49 @@
+MIS FINANZAS 2.0 - VERSION ACTUALIZADA
+
+CONTENIDO
+- index.html: aplicación.
+- manifest.webmanifest: configuración instalable PWA.
+- service-worker.js: caché para uso básico sin conexión.
+- icon-192.png e icon-512.png: iconos.
+
+DATOS INICIALES Y CORRECCIONES
+- BCV: saldo de referencia CHF 29.32.
+- Efectivo: CHF 250.00.
+- Tarjeta de crédito: CHF 0.00.
+- TWINT normal está vinculado a BCV y no se cuenta como una segunda cuenta.
+- TWINT Paga más tarde: CHF 398 + CHF 60 + CHF 45 = CHF 503 pendientes.
+- Mobility factura anterior: CHF 286.40.
+- Mobility factura 14338325: CHF 1,289.15, distinta de la anterior. Vencimiento 14.11.2026; solicitar acuerdo de pago. Referencia: 00 00000 01433 83250 00140 69125.
+- Ingresos previstos no recibidos: Yoojo CHF 300, Michelle CHF 350, alquiler Mercedes CHF 240. No se cuentan como saldo hasta confirmar recepción.
+- Reserva de ahorro: 5% de cada ingreso confirmado.
+- Recordatorios configurados: 09:00, 15:00 y 21:00.
+
+IMPORTANTE SOBRE LOS DATOS
+La aplicación guarda los datos en el almacenamiento local del navegador/dispositivo. Antes de actualizar, abre Ajustes y copias y pulsa Exportar copia completa JSON. Guarda ese archivo en un lugar seguro.
+Si publicas esta actualización en la MISMA dirección de GitHub Pages, el almacenamiento local de ese mismo origen normalmente se conserva. No borres los datos del sitio ni cambies el repositorio/dominio sin hacer copia.
+
+PUBLICAR EN GITHUB PAGES
+1. En un ordenador, entra en github.com e inicia sesión.
+2. Abre el repositorio que ya utilizaste para publicar la primera versión.
+3. Entra en la carpeta raíz (la página principal del repositorio).
+4. Sube/reemplaza TODOS los archivos de este ZIP: index.html, manifest.webmanifest, service-worker.js, icon-192.png e icon-512.png.
+5. Confirma el commit en la misma rama que usa GitHub Pages (normalmente main) y en la misma carpeta publicada (normalmente /root).
+6. En Settings > Pages, comprueba que la fuente sigue siendo la misma rama/carpeta.
+7. Espera a que termine el despliegue y abre la URL de GitHub Pages.
+
+INSTALAR EN IPHONE
+1. Abre la URL publicada con Safari (no desde el navegador interno de otra aplicación).
+2. Pulsa Compartir.
+3. Desplázate y elige Añadir a pantalla de inicio.
+4. Deja el nombre Mis Finanzas y pulsa Añadir.
+5. Abre la aplicación desde el nuevo icono.
+
+COPIA Y RESTAURACION
+- Antes de cambios importantes: Ajustes y copias > Exportar copia completa JSON.
+- Para recuperar datos: Ajustes y copias > Importar copia JSON.
+- Importar una copia reemplaza los datos actuales, así que haz primero una copia del estado actual.
+
+LIMITACIONES
+- No hay conexión bancaria automática ni se deben introducir claves bancarias. Importa extractos CSV/CAMT.053 de BCV.
+- El dictado prepara borradores que debes confirmar.
+- Los recordatorios de esta versión funcionan mientras la aplicación está abierta. Notificaciones fiables con la app cerrada requieren configurar un servicio Web Push en servidor.
